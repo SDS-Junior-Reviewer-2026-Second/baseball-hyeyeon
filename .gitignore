@@ -16,7 +16,11 @@ target/
 .apt_generated
 .classpath
 .factorypath
+/build/
+/.settings/
 .project
+.classpath
+/bin/
 .settings
 .springBeans
 .sts4-cache
