@@ -1,12 +1,24 @@
 package baseball;
 
 public class GuessResult {
-    public boolean solved;
-    public int strikes;
-    public int balls;
+    private boolean solved;
+    private int strikes;
+    private int balls;
     GuessResult(boolean solved, int strikes, int balls) {
         this.solved = solved;
         this.strikes = strikes;
         this.balls = balls;
+    }
+
+    public int getBalls() {
+        return balls;
+    }
+
+    public int getStrikes() {
+        return strikes;
+    }
+
+    public boolean isSolved() {
+        return solved;
     }
 }

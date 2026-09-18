@@ -12,7 +12,6 @@ public class Game {
         } else{
             return null;
         }
-        return null;
     }
 
     private static void assertIllegalArgument(String guessNumber) {
