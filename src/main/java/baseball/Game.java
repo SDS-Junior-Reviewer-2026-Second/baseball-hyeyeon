@@ -2,13 +2,17 @@ package baseball;
 
 public class Game {
 
-    public void guess(String guessNumber) {
+    public String question;
+
+    public GuessResult guess(String guessNumber) {
         assertIllegalArgument(guessNumber);
 
-        if(isDuplicatedNumber(guessNumber)) {
-            throw new IllegalArgumentException();
+        if(guessNumber.equals(question)){
+            return new GuessResult(true, 3, 0);
+        } else{
+            return null;
         }
-
+        return null;
     }
 
     private static void assertIllegalArgument(String guessNumber) {
@@ -23,6 +27,9 @@ public class Game {
             if(number < '0' || number > '9') {
                 throw new IllegalArgumentException();
             }
+        }
+        if(isDuplicatedNumber(guessNumber)) {
+            throw new IllegalArgumentException();
         }
     }
 
